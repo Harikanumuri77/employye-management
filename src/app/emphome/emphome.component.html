@@ -1,0 +1,46 @@
+ 
+
+ 
+ <!-- <button class="btn btn-primary" [routerLink]="['/add']">ADD EMEPLOYEE</button> -->
+<button class="btn btn-primary" (click)="getEmpData()">Get</button> 
+
+
+<div class="container">
+
+  <table class="table table-bordered">
+    <thead style="color: brown;">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">username</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Complete Address</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let emp of empData;" class="table table-bordered">
+      <tr style="color: blue;">
+        <td align="center">{{ emp.id }}</td>
+        <td align="center">{{ emp.username }}</td>
+        <td align="center">{{ emp.name }}</td>
+        <td align="center">{{ emp.email }}</td>
+        <td align="center">{{ emp.gender }}</td>
+        <td align="center">{{ emp.phone_number }}</td>
+        <td align="center">{{ emp.designation }}</td>
+        <td align="center">{{ emp.complete_address }}</td>
+        <td align="center"><button style="background-color: black; color: white; border-radius: 5px;">Edit</button></td>
+        <td align="center"><button style="background-color: black; color: white; border-radius: 5px;" (click)="handledelete(id)">Delete</button></td>
+        <!-- <button (click)="updateEmployee(i)">Edit</button> -->
+        <!-- <button (click)="deleteEmployee(i)">Delete</button> -->
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<!-- <h1>{{empData.id}}</h1> -->
