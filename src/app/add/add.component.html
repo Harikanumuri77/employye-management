@@ -4,35 +4,35 @@
     <fieldset class="fieldset">
     <div class="mb-3">
       <label for="id" class="form-label">ID</label>
-      <input type="id" class="form-control" id="id" aria-describedby="emailHelp">
+      <input type="id" class="form-control" formControlName="id" id="id" aria-describedby="emailHelp">
     </div>
     <div class="mb-3">
       <label for="username" class="form-label">USER NAME</label>
-      <input type="text" class="form-control" id="username">
+      <input type="text" class="form-control" formControlName="username" id="username">
     </div>
     <div class="mb-3">
       <label for="name" class="form-label">NAME</label>
-      <input type="text" class="form-control" id="name">
+      <input type="text" class="form-control" formControlName="name" id="name">
     </div>
     <div class="mb-3">
       <label for="email" class="form-label">EMAIL</label>
-      <input type="text" class="form-control" id="email">
+      <input type="text" class="form-control" formControlName="email" id="email">
     </div>
     <div class="mb-3">
       <label for="gender" class="form-label">GENDER</label>
-      <input type="text" class="form-control" id="gender">
+      <input type="text" class="form-control" formControlName="gender" id="gender">
     </div>
     <div class="mb-3">
       <label for="phone_number" class="form-label">PHONE NUMBER</label>
-      <input type="number" class="form-control" id="phone_number">
+      <input type="number" class="form-control" formControlName="phone_number" id="phone_number">
     </div>
     <div class="mb-3">
       <label for="designation" class="form-label">DESIGNATION</label>
-      <input type="text" class="form-control" id="designation">
+      <input type="text" class="form-control" formControlName="designation" id="designation">
     </div>
     <div class="mb-3">
       <label for="complete_address" class="form-label">COMPLETE ADDRESS</label>
-      <input type="text" class="form-control" id="complete_address">
+      <input type="text" class="form-control" formControlName="complete_address" id="complete_address">
     </div>
     <div class="input-group align-center">
     <button type="submit" class="btn btn-danger" (click)="handleSubmit($event)">Submit</button>
