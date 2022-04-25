@@ -35,7 +35,7 @@
       <input type="text" class="form-control" id="complete_address">
     </div>
     <div class="input-group align-center">
-    <button type="submit" class="btn btn-danger" [disabled]="employeeForm.invalid">Submit</button>
+    <button type="submit" class="btn btn-danger" (click)="handleSubmit($event)">Submit</button>
 
 </div>
     </fieldset>

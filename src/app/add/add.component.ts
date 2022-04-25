@@ -40,17 +40,18 @@ export class AddComponent implements OnInit {
 
   handleSubmit(event:MouseEvent) {
 
-    event.preventDefault();
-    if (this.employeeForm.invalid) {
-      console.log('Invalid id value');
-      return;
-    }
+console.log("Added Employee");
+
+    // event.preventDefault();
+    // if (this.employeeForm.invalid) {
+    //   console.log('Invalid id value');
+    //   return;
+    // }
 
     this.EmpData
     .addEmployeeData({ ...this.employeeForm.value, })
      .subscribe((data) => {
       this.employeeForm.reset();
-      // console.log(data);
       // console.log("itemadd");
     });
     

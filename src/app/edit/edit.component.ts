@@ -35,13 +35,12 @@ export class EditComponent implements OnInit {
           this.employeeForm.controls['phone_number'].patchValue(data.phone_number);
           this.employeeForm.controls['designation'].patchValue(data.designation);
           this.employeeForm.controls['complete_address'].patchValue(data.complete_address);
-          
+
         });
     });
   }
 
-  createEmployeeForm()
-  {
+  createEmployeeForm() {
     this.employeeForm = this.fb.group({
       id: ['', Validators.required],
       username: ['', Validators.required],
@@ -53,16 +52,18 @@ export class EditComponent implements OnInit {
       complete_address: ['', Validators.required],
     });
     console.log(this.employeeForm);
-    this.employeeForm.get('username').valueChanges.subscribe(()=>{});
+    this.employeeForm.get('username').valueChanges.subscribe(() => { });
   }
 
   handleSubmit(event: MouseEvent) {
+    console.log("Edited Employee Details successfully");
+
     event.preventDefault();
     if (this.employeeForm.invalid) {
       return;
     }
     this.empdataservice
-      . updateEmployeeData( { ...this.employeeForm.value })
+      .updateEmployeeData({ ...this.employeeForm.value })
       .subscribe((data) => {
         this.employeeForm.reset();
         this.router.navigateByUrl('/add');

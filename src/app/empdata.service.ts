@@ -14,6 +14,11 @@ export class EmpdataService {
   constructor(private http: HttpClient) { }
   baseUrl="https://api.onlinewebtutorblog.com/employees";
 
+  // public fetchAll(): Observable<Employee[]> {
+  //   const observable = this.http.get<Employee[]>(`${this.baseUrl}/empData`);
+  //   return observable;
+  //   }
+
   
   getEmployeeData() {
     return this.http.get("https://api.onlinewebtutorblog.com/employees")
@@ -23,6 +28,7 @@ export class EmpdataService {
   // }
   public addEmployeeData(empt: Employee): Observable<Employee> {
     return this.http.post<Employee>(`${this.baseUrl}/empData`, empt);
+    console.log('Added a employee')
   }
   
   // updateEmployeeData() {
