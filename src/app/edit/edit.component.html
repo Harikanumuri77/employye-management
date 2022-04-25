@@ -1,6 +1,6 @@
 
 
-<form  (ngSubmit)="handleSubmit($event)">
+<form  (ngSubmit)="handleSubmit($event)" [formGroup]="employeeForm">
     <fieldset class="fieldset">
     <div class="mb-3">
       <label for="id" class="form-label">ID</label>
