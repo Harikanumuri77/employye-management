@@ -1,0 +1,42 @@
+.table-bordered {
+
+    font-family: Arial, Helvetica, sans-serif;
+  
+    border-collapse: collapse;
+  
+    width: 100%;
+  
+  
+  
+  }
+  
+  
+  
+  .table-bordered td, .table-bordered th {
+  
+      border: 1px solid #ddd;
+  
+      padding: 8px;
+  
+  }
+  
+  
+  
+  .table-bordered tr:hover {background-color: #ddd;}
+  
+  
+  
+  
+  .table-bordered th {
+  
+      padding-top: 12px;
+  
+      padding-bottom: 12px;
+  
+      text-align: left;
+  
+      background-color: #04AA6D;
+  
+      color: white;
+  
+  }
