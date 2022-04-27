@@ -56,12 +56,12 @@ export class EmphomeComponent implements OnInit {
     });
   }
 
-  handledelete(id:number) {
+  handledelete(id:any) {
   
-    console.log("Deleted Employee Details successfully");
+    console.log(id);
 
     this._http.deleteEmployeeData(id).subscribe((data:any) => {
-      this.empData = this.empData.filter((emp) => emp.id !== data.id);
+      this.empData = this.empData.filter((emphome) => emphome.id !== data.id);
     });
   }
     // this._http.deleteEmployeeData().subscribe((data:any) => {

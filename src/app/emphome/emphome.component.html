@@ -22,7 +22,7 @@
         <th scope="col">Delete</th>
       </tr>
     </thead>
-    <tbody *ngFor="let emp of empData;" class="table table-bordered">
+    <tbody *ngFor="let emp of empData; let i as index" class="table table-bordered">
       <tr style="color: blue;">
         <td align="center">{{ emp.id }}</td>
         <td align="center">{{ emp.username }}</td>
@@ -33,7 +33,7 @@
         <td align="center">{{ emp.designation }}</td>
         <td align="center">{{ emp.complete_address }}</td>
         <td align="center"><button style="background-color: black; color: white; border-radius: 5px;">Edit</button></td>
-        <td align="center"><button style="background-color: black; color: white; border-radius: 5px;" (click)="handledelete($event)">Delete</button></td>
+        <td align="center"><button style="background-color: black; color: white; border-radius: 5px;" (click)="handledelete(i)">Delete</button></td>
         <!-- <button (click)="updateEmployee(i)">Edit</button> -->
         <!-- <button (click)="deleteEmployee(i)">Delete</button> -->
       </tr>

@@ -27,7 +27,7 @@ export class EmpdataService {
   //   return this.http.post("https://api.onlinewebtutorblog.com/employees",{})
   // }
   public addEmployeeData(empt: Employee): Observable<Employee> {
-    return this.http.post<Employee>(`${this.baseUrl}/empData`, empt);
+    return this.http.post<Employee>(`${this.baseUrl}`, empt);
     console.log('Added a employee')
   }
   
@@ -35,14 +35,14 @@ export class EmpdataService {
   //   return this.http.patch("https://api.onlinewebtutorblog.com/employees", {})
   // }
   public updateEmployeeData(id: number): Observable<Employee> {
-    return this.http.put<Employee>(`${this.baseUrl}/empData/${id}`, id);
+    return this.http.put<Employee>(`${this.baseUrl}/${id}`, id);
   }
   // deleteEmployeeData(id:number) {
 
   //   return this.http.delete("https://api.onlinewebtutorblog.com/employees",) 
   // }
   public deleteEmployeeData(id: number): Observable<Employee> {
-    return this.http.delete<Employee>(`${this.baseUrl}/empData/${id}`);
+    return this.http.delete<Employee>(`${this.baseUrl}/${id}`);
   }
 
 }
